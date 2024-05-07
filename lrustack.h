@@ -5,35 +5,10 @@
 #ifndef __LRUSTACK_H
 #define __LRUSTACK_H
 
-/**
- * This file contains some starter code to get you started on your LRU implementation. 
- * You are free to implement it however you see fit. You can design it to emulate how this
- * would be implemented in hardware, or design a purely software stack. 
- * 
- * We have broken down the LRU stack's
- * job/interface into two parts:
- *  - get LRU: gets the current index of the LRU block
- *  - set MRU: sets a certain block's index as the MRU. 
- * If you implement it using these suggestions, you will be able to test your LRU implementation
- * using lrustacktest.c
- * 
- * NOTES: 
- *      - You are not required to use this LRU interface. Feel free to design it from scratch if 
- *      that is better for you.
- *      - This will not behave like your traditional LIFO stack  
- */
 
-/**
- * struct to hold a cache set's LRU stack. Note that this stack is currently intended
- * to store the indices of cache blocks in a cache set in an LRU order. Please make
- * sure you understand that this is NOT written to store whole cache blocks. If you
- * want to do the latter, you will have to change the LRU interface defined in this
- * file.
- */
 typedef struct lru_stack_t {
 	int size;   // Corresponds to the associativity
     int* priorityBits; //track1
-    // TODO: Add anything else needed to maintain a LRU Stack (ex: priority bits?). 
 } lru_stack_t;
 
 /**
